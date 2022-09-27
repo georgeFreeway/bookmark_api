@@ -1,0 +1,19 @@
+version: '3'
+services:
+  dev_db:
+    image: postgres:13
+    ports:
+      - '5434:5432'
+    environment:
+      POSTGRES_USER: dante
+      POSTGRES_PASSWORD: test1234
+      POSTGRES_NAME: commerce
+      
+  test_db:
+    image: postgres:13
+    ports:
+      - '5435:5432'
+    environment:
+      POSTGRES_USER: dante
+      POSTGRES_PASSWORD: test1234
+      POSTGRES_NAME: commerce
